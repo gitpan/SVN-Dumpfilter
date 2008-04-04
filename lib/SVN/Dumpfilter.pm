@@ -13,7 +13,8 @@ BEGIN {
     use Exporter ();
     our ( $VERSION, @ISA, @EXPORT, @EXPORT_OK, %EXPORT_TAGS );
 
-    use version; $VERSION = qv('0.20');
+    #use version; $  VERSION = qv('0.21');
+    $VERSION = '0.21';
 
     @ISA    = qw(Exporter);
     @EXPORT = qw(&Dumpfilter &svn_recalc_content_header
@@ -46,9 +47,9 @@ our $outfh;
 use vars qw($CR $NL);
 
 BEGIN {
-
     # "\n" and "\r" are not fully platform independend.
     # So explicite ASCII numbers in octal are used.
+    # Variables, not constants, are used because these are used inside regexes.
     $CR = "\015";    # carriage return
     $NL = "\012";    # new line
 }

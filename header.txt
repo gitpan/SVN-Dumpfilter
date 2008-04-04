@@ -1,3 +1,0 @@
-recalc_function:
-Header which are not exists before and are not needed must not be added by the recalc functions.
-Header which are exists before and recalc to the value 0 must not be deleted.
