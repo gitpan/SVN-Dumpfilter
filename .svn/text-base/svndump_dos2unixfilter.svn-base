@@ -1,0 +1,15 @@
+#!/usr/bin/perl -w
+# $Id$
+# Copyright (C) 2006 by Martin Scharrer <martin@scharrer-online.de>
+# This is free software under the GPL.
+
+use strict;
+use SVN::Dumpfilter qw(Dumpfilter dos2unix_filter);
+
+my $dumpfile = shift @ARGV;
+my $outfile  = shift @ARGV;
+
+Dumpfilter($dumpfile, $outfile, \&dos2unix_filter);
+
+exit(0);
+__END__

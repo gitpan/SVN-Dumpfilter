@@ -1,0 +1,12 @@
+Figure out while $href->{'content'} exists but ${$href->{'content'}} is undef in revision nodes.
+
+Create module sub which deletes an given entry.
+
+Rethink node entry representation. (incl. OO, etc.)
+
+Add option to support large content of single nodes: 
+    - Maybe: headers only, content is read buffer size wise and direct written
+      to outfile
+    - Maybe: content is read buffer size wise. Filter can process the buffers
+      one by one. Filters have to call function to read new buffer or short
+      circuit the rest of the content input direct to the output file.
